@@ -20,27 +20,6 @@ function whatdo() {
         }
     }
 
-    function o(i) {
-        i != "all" ? r = n.filter("[data-category*='" + i + "']") : r = n;
-        var s = t * e - 1;
-        e = 1;
-        var o = r.filter(":lt(10)");
-        n.fadeOut(0);
-        o.delay(30).fadeIn(300, function() {
-            $(window).trigger("changeGoodsPage")
-        });
-        if (r.length <= t * e) {
-            $("#listMore").addClass("disable");
-            $("#listMoreWrap").css({
-                height: 27
-            })
-        } else {
-            $("#listMore").removeClass("disable");
-            $("#listMoreWrap").css({
-                height: 120
-            })
-        }
-    }
     var e = 1,
         t = 10;
     $(".whatdo li").hover(function() {
@@ -75,105 +54,6 @@ function whatdo() {
             })
         }
     });
-    $("#listMore").hover(function() {
-        if (!$(this).hasClass("disable")) {
-            TweenMax.to(this, .4, {
-                borderWidth: 12,
-                borderRadius: 51,
-                yoyo: !0,
-                repeat: -1,
-                ease: Linear.easeNone
-            });
-            TweenMax.to(this, .4, {
-                backgroundColor: "#ff8b62",
-                color: "#fff"
-            })
-        }
-    }, function() {
-        TweenMax.to(this, .4, {
-            backgroundColor: "#e4e4e4",
-            color: "#666666"
-        });
-        TweenMax.to(this, .4, {
-            borderWidth: 0,
-            borderRadius: 39,
-            yoyo: !1,
-            repeat: 0,
-            ease: Linear.easeNone
-        })
-    });
-    $("#listMore").click(function() {
-        if (!$(this).hasClass("disable")) {
-            e++;
-            s()
-        }
-    });
-    $("#listMore,.whatdo li").trigger("mouseout");
-    $(".whatdo li").click(function() {
-        var e = this,
-            t = $(this).find("div");
-        TweenMax.to(this, .2, {
-            width: 110,
-            height: 104
-        });
-        TweenMax.to(t, .2, {
-            yoyo: !1,
-            repeat: 0,
-            borderWidth: 0,
-            width: 104,
-            height: 104,
-            borderRadius: 54
-        });
-        TweenMax.to($(this).find("b"), .1, {
-            fontSize: 38,
-            paddingTop: 18
-        });
-        var n = $(e).siblings(".active");
-        TweenMax.to(n.find("b"), .1, {
-            fontSize: 32,
-            paddingTop: 15
-        });
-        TweenMax.to(n.find("div"), .3, {
-            yoyo: !1,
-            repeat: 0,
-            width: 86,
-            fontSize: 18,
-            height: 86,
-            borderWidth: 0,
-            borderRadius: 43
-        });
-        n.removeClass("active");
-        TweenMax.to(n, .5, {
-            yoyo: !1,
-            width: 92,
-            height: 86,
-            repeat: 0,
-            ease: Back.easeOut,
-            onComplete: function() {}
-        });
-        $(e).addClass("active");
-        TweenMax.to(t, .3, {
-            yoyo: !1,
-            repeat: 0,
-            fontSize: 21,
-            borderWidth: 0,
-            ease: Back.easeOut,
-            onComplete: function() {
-                o($(e).data("target"))
-            }
-        })
-    });
-    $("#whatdoList dl dd p").click(function() {
-        TweenMax.to("#scramble", 3, {
-            scrambleText: {
-                text: "ScrambleText allows you to animate the scrambling of text.",
-                chars: "lowerCase",
-                revealDelay: .5,
-                tweenLength: !1,
-                ease: Linear.easeNone
-            }
-        })
-    });
     var n = $("#whatdoList dl"),
         r = n,
         i = "all";
@@ -182,7 +62,6 @@ function whatdo() {
 
 
 function shuffleContent(e) {
-
 }(function (e, t) {
     typeof module == "object" && typeof module.exports == "object" ? module.exports = e.document ? t(e, !0) : function(e) {
         if (!e.document) throw new Error("jQuery requires a window with a document");
