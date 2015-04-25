@@ -12,7 +12,7 @@ hr { display: block; height: 1px; border-width: 1px 0px 0px; border-top-style: s
 input, select { vertical-align: middle; }
 * { box-sizing: border-box; }
 html { font-size: 62.5%; height: 100%; }
-body { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; line-height: 1; color: black; position: relative; -webkit-font-smoothing: antialiased; background: url(./bgsmall.png) repeat; height: 100%; text-align: center; }
+body { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; line-height: 1; color: black; position: relative; -webkit-font-smoothing: antialiased; background: url(./pants.png) repeat; height: 100%; text-align: center; }
 a { color: rgb(255, 255, 255); text-decoration: none; line-height: inherit; }
 a:hover { color: rgb(255, 255, 255); }
 a:focus { color: rgb(255, 255, 255); outline: none; }
