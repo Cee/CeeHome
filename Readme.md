@@ -1,5 +1,4 @@
 # CeeHome
----------
 
 ## License
 BSD License
