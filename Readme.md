@@ -1,0 +1,5 @@
+# CeeHome
+---------
+
+## License
+BSD License
